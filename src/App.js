@@ -1,9 +1,10 @@
 import React from 'react';
+import Auth from './Components/Auth'
 
 
 const App = props => (
-      <div>
-     
-      </div>
-    );
+  <div>
+    <Auth />
+  </div>
+);
 export default App;
