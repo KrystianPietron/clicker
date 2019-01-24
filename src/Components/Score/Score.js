@@ -4,8 +4,10 @@ import './Score.css'
 
 const Score = props => (
     <Paper className="paper_Score">
-        <h3>Zdobyta Gotówka</h3>
-        <h3>Score</h3>
+        <div className="div__Score">
+            <h3>Zdobyta Gotówka</h3>
+            <h3>Score</h3>
+        </div>
     </Paper>
 )
 export default Score
