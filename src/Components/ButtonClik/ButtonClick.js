@@ -1,7 +1,9 @@
 import React from 'react'
+import Button from '../../Elements/Button'
 
-export default ButtonClick = props => (
-    <div>
-        
-    </div>
+const ButtonClick = props => (
+    <Button
+        label="Klik!"
+    />
 )
+export default ButtonClick
