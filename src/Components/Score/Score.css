@@ -1,12 +1,14 @@
 .paper_Score{
-    margin: 0 0 0 3px; 
+    margin: 0 0 0 2px; 
+    
 }
 
 .div__Score{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     width: 80vw;
-    background-color: silver;
-    height: 12.5vh;
+    background-color: gray;
+    height: 11.3vh;
 }
