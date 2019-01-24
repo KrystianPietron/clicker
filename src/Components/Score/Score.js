@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
+import './Score.css'
 
 const Score = props => (
     <Paper className="paper_Score">

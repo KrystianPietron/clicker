@@ -1,9 +1,12 @@
 import React from 'react'
 import Button from '../../Elements/Button'
+import './ButtonClick.css'
 
 const ButtonClick = props => (
-    <Button
-        label="Klik!"
-    />
+    <div className="ButtonClick">
+        <Button
+            label="Klik!"
+        />
+    </div>
 )
 export default ButtonClick
