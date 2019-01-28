@@ -1,9 +1,3 @@
-import {
-    auth,
-    googleProvider,
-    database
-} from '../firebaseConfig'
-
 const INITIAL_STATE = {
 
 }
