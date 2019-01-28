@@ -8,11 +8,11 @@ const Score = props => (
         zDepth={3}>
         <div className="div__Score">
             <h4>Zdobyta Gotówka: </h4>
-            <h4>Score</h4>
+            <h4>{props.score} ZŁ</h4>
         </div>
     </Paper>
 )
 const mapStateToProps = state => ({
-
+    score: state.game.score,
 })
-export default connect()(Score)
+export default connect(mapStateToProps, null)(Score)
