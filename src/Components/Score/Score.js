@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
+import { connect } from 'react-redux'
 import './Score.css'
 
 const Score = props => (
@@ -11,4 +12,7 @@ const Score = props => (
         </div>
     </Paper>
 )
-export default Score
+const mapStateToProps = state => ({
+
+})
+export default connect()(Score)

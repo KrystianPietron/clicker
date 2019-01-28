@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../../Elements/Button'
+import { connect } from 'react-redux'
 import './ButtonClick.css'
 
 const ButtonClick = props => (
@@ -9,4 +10,8 @@ const ButtonClick = props => (
         />
     </div>
 )
-export default ButtonClick
+const mapDispatchToProps = dispatch => ({
+
+})
+
+export default connect()(ButtonClick)
