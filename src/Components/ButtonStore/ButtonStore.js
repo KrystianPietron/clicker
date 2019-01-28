@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper'
 import Button from '../../Elements/Button'
 import { connect } from 'react-redux'
 import './ButtonStore.css'
-import { buttonStore1, buttonStore2 } from '../../state/game';
+import { buttonStore1, buttonStore2, buttonStore3 } from '../../state/game';
 
 const style = {
     buttons: {
@@ -35,6 +35,7 @@ const ButtonStore = props => (
             style={style.buttons}
             label=" 10 000zł"
             backgroundColor="gray"
+            onClick={props.buttonStore3}
         />
         <Button
             style={style.buttons}
@@ -71,6 +72,7 @@ const ButtonStore = props => (
 
 const mapDispatchToProps = dispatch => ({
     buttonStore1: () => dispatch(buttonStore1()),
-    buttonStore2: () => dispatch(buttonStore2())
+    buttonStore2: () => dispatch(buttonStore2()),
+    buttonStore3: () => dispatch(buttonStore3()),
 })
 export default connect(null, mapDispatchToProps)(ButtonStore)

@@ -1,12 +1,14 @@
 const CLICK_ACTION = "game/CLICK_ACTION"
 const BUTTON_STORE1 = "game/BUTTON_STORE1"
 const BUTTON_STORE2 = "game/BUTTON_STORE2"
+const BUTTON_STORE3 = "game/BUTTON_STORE3"
 
 const INITIAL_STATE = {
     score: 0,
     buttonClick: 1,
-    buttonStore1: 2,
-    buttonStore2: 10
+    buttonStore1: 0,
+    buttonStore2: 0,
+    buttonStore3: 0,
 }
 export const buttonClickAction = () => ({
     type: CLICK_ACTION
@@ -36,6 +38,18 @@ export const buttonStore2 = () => (dispatch, getState) => {
         alert("zbyt mało Gotówki")
 }
 
+const buttonStore3Action = () => ({
+    type: BUTTON_STORE3
+})
+
+export const buttonStore3 = () => (dispatch, getState) => {
+    const { game: { score } } = getState();
+    (score >= 10000) ?
+        dispatch(buttonStore3Action())
+        :
+        alert("zbyt mało Gotówki")
+}
+
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case CLICK_ACTION:
@@ -54,6 +68,12 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 score: state.score - 1000,
                 buttonClick: state.buttonClick + 50
+            }
+        case BUTTON_STORE3:
+            return {
+                ...state,
+                score: state.score - 10000,
+                buttonClick: state.buttonClick + 100
             }
         default:
             return state
