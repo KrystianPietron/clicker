@@ -5,9 +5,11 @@ import GameApp from '../GameApp'
 import './Game.css'
 
 const Game = props => (
-    <Paper className="paper_Game">
-        <ButtonStore />
-        <GameApp/>
-    </Paper>
+    <section>
+        <Paper className="paper_Game">
+            <ButtonStore />
+            <GameApp />
+        </Paper>
+    </section>
 )
 export default Game

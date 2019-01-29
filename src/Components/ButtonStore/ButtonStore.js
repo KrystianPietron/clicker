@@ -25,63 +25,65 @@ const style = {
     }
 }
 const ButtonStore = props => (
-    <Paper className='paper__ButtonStore'
-        zDepth={5}
-    >
-        <Button
-            style={style.buttons}
-            label=" 100zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore1}
-        />
-        <Button
-            style={style.buttons}
-            label="1 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore2}
-        />
-        <Button
-            style={style.buttons}
-            label=" 10 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore3}
-        />
-        <Button
-            style={style.buttons}
-            label=" 100 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore4}
-        />
-        <Button
-            style={style.buttons}
-            label="1 000 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore5}
-        />
-        <Button
-            style={style.buttons}
-            label=" 10 000 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore6}
-        />
-        <Button
-            style={style.buttons}
-            label="100 000 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore7}
-        />
-        <Button
-            style={style.buttons}
-            label="1 000 000 000zł"
-            backgroundColor="gray"
-            onClick={props.buttonStore8}
-        />
-        <Button
-            style={style.buttons}
-            label="Tablica Rekordów"
-            backgroundColor="gray"
-        />
-    </Paper>
+    <section>
+        <Paper className='paper__ButtonStore'
+            zDepth={5}
+        >
+            <Button
+                style={style.buttons}
+                label=" 100zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore1}
+            />
+            <Button
+                style={style.buttons}
+                label="1 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore2}
+            />
+            <Button
+                style={style.buttons}
+                label=" 10 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore3}
+            />
+            <Button
+                style={style.buttons}
+                label=" 100 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore4}
+            />
+            <Button
+                style={style.buttons}
+                label="1 000 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore5}
+            />
+            <Button
+                style={style.buttons}
+                label=" 10 000 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore6}
+            />
+            <Button
+                style={style.buttons}
+                label="100 000 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore7}
+            />
+            <Button
+                style={style.buttons}
+                label="1 000 000 000zł"
+                backgroundColor="gray"
+                onClick={props.buttonStore8}
+            />
+            <Button
+                style={style.buttons}
+                label="Tablica Rekordów"
+                backgroundColor="gray"
+            />
+        </Paper>
+    </section>
 )
 
 const mapDispatchToProps = dispatch => ({

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 82vh;
-    /* background-color: silver; */
+    /* background-color: rgb(212, 209, 209); */
 }
 
 .ButtonLevelUp{
@@ -11,4 +11,9 @@
     justify-content: center;
     align-items: center;
     width: 80vw;
+}
+
+.img__Click{
+    width: 90%;
+    height: 90%;
 }

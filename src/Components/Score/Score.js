@@ -4,13 +4,15 @@ import { connect } from 'react-redux'
 import './Score.css'
 
 const Score = props => (
-    <Paper className="paper_Score"
-        zDepth={3}>
-        <div className="div__Score">
-            <h4>Zdobyta Gotówka: </h4>
-            <h4>{props.score} ZŁ</h4>
-        </div>
-    </Paper>
+    <section>
+        <Paper className="paper_Score"
+            zDepth={3}>
+            <article className="div__Score">
+                <h4>Zdobyta Gotówka: </h4>
+                <h4>{props.score} ZŁ</h4>
+            </article>
+        </Paper>
+    </section>
 )
 const mapStateToProps = state => ({
     score: state.game.score,

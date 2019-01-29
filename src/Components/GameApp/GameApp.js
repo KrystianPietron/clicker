@@ -3,9 +3,9 @@ import Score from '../Score'
 import ButtonClick from '../ButtonClik'
 
 const GameApp = props => (
-    <div className="div_GameApp">
+    <section className="div_GameApp">
         <Score />
         <ButtonClick />
-    </div>
+    </section>
 )
 export default GameApp

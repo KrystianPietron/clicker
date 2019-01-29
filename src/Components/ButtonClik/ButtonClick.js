@@ -8,7 +8,7 @@ import zdjecie from '../../img.png'
 const ButtonClick = props => (
     <section>
         <article className="ButtonClick">
-            <img src={zdjecie} alt="click image"
+            <img src={zdjecie} alt="click image" className="img__Click"
                 onClick={props.buttonClick}
             />
         </article>

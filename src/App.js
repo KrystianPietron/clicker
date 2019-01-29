@@ -4,9 +4,9 @@ import Game from './Components/Game'
 
 
 const App = props => (
-  <div>
+  <section>
     {/* <Auth /> */}
     <Game />
-  </div>
+  </section>
 );
 export default App;
