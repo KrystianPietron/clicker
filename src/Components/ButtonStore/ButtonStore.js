@@ -18,7 +18,7 @@ const style = {
     buttons: {
         width: '100%',
         margin: '1px 0 1px 0',
-        height: "11.11vh",
+        height: "10.7vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

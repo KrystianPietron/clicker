@@ -2,6 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 89.2vh;
+    height: 82vh;
     /* background-color: silver; */
+}
+
+.ButtonLevelUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
 }
