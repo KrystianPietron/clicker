@@ -3,6 +3,7 @@ import Dialog from '../Elements/Dialog'
 
 const CLICK_ACTION = "game/CLICK_ACTION"
 const BUTTON_STORE1 = "game/BUTTON_STORE1"
+const BUTTON_STORE1_EXPENSE = "game/BUTTON_STORE1_EXPENSE"
 const BUTTON_STORE2 = "game/BUTTON_STORE2"
 const BUTTON_STORE3 = "game/BUTTON_STORE3"
 const BUTTON_STORE4 = "game/BUTTON_STORE4"
@@ -13,10 +14,11 @@ const BUTTON_STORE8 = "game/BUTTON_STORE8"
 
 const INITIAL_STATE = {
     score: 0,
-    buttonClick: 1,
-    buttonStore1: 0,
-    buttonStore2: 0,
-    buttonStore3: 0,
+    buttonClick: 100,
+    buttonStore1Time: 3000,
+    buttonStore1Expense: 100,
+    buttonStore2: 300,
+    buttonStore3: 300,
 }
 export const buttonClickAction = () => ({
     type: CLICK_ACTION
@@ -25,17 +27,26 @@ export const buttonClickAction = () => ({
 const buttonStore1Action = () => ({
     type: BUTTON_STORE1
 })
+const buttonStore1ExpenseAction = () => ({
+    type: BUTTON_STORE1_EXPENSE
+})
 export const buttonStore1 = () => (dispatch, getState) => {
-    const { game: { score } } = getState();
-    (score >= 100) ?
-        dispatch(buttonStore1Action())
-        :
+    const { game: { score, buttonStore1Time, buttonStore1Expense } } = getState();
+    if (score >= buttonStore1Expense) {
+        clearInterval(inter)
+        dispatch(buttonStore1ExpenseAction())
+        const inter = setInterval(() => dispatch(buttonStore1Action()), buttonStore1Time)
+    }
+    else {
         alert("zbyt mało Gotówki")
+    }
 }
-
 const buttonStore2Action = () => ({
     type: BUTTON_STORE2
 })
+
+
+
 export const buttonStore2 = () => (dispatch, getState) => {
     const { game: { score } } = getState();
     (score >= 1000) ?
@@ -119,8 +130,14 @@ export default (state = INITIAL_STATE, action) => {
         case BUTTON_STORE1:
             return {
                 ...state,
-                score: state.score - 100,
-                buttonClick: state.buttonClick + 1
+                score: state.score + 2,
+            }
+        case BUTTON_STORE1_EXPENSE:
+            return {
+                ...state,
+                score: state.score - state.buttonStore1Expense,
+                buttonStore1Time: state.buttonStore1Time - 100,
+                buttonStore1Expense: state.buttonStore1Expense + state.buttonStore1Expense,
             }
         case BUTTON_STORE2:
             return {

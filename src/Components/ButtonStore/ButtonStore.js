@@ -31,7 +31,7 @@ const ButtonStore = props => (
         >
             <Button
                 style={style.buttons}
-                label=" 100zł"
+                label={`${props.buttonStore1Expense} Zł`}
                 backgroundColor="gray"
                 onClick={props.buttonStore1}
             />
@@ -85,6 +85,9 @@ const ButtonStore = props => (
         </Paper>
     </section>
 )
+const mapStateToProps = state => ({
+    buttonStore1Expense: state.game.buttonStore1Expense,
+})
 
 const mapDispatchToProps = dispatch => ({
     buttonStore1: () => dispatch(buttonStore1()),
@@ -96,4 +99,4 @@ const mapDispatchToProps = dispatch => ({
     buttonStore7: () => dispatch(buttonStore7()),
     buttonStore8: () => dispatch(buttonStore8()),
 })
-export default connect(null, mapDispatchToProps)(ButtonStore)
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonStore)
